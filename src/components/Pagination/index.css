@@ -1,0 +1,19 @@
+.pagination-container {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: space-evenly;
+}
+.page-btn {
+  background-color: black;
+  padding: 1rem;
+  color: #ffffff;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+.active {
+  color: black;
+  background-color: #ffffff;
+  border: 1px solid black;
+}
