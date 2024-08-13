@@ -8,6 +8,11 @@
   color: #ffffff;
   font-family: roboto;
 }
+@media screen and (max-width: 500px){
+  .movie-details-section{
+    flex-direction: column;
+  }
+}
 .movie-detaile-bg {
   background-size: cover;
   opacity: 0.8;
