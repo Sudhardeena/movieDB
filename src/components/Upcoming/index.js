@@ -19,7 +19,7 @@ class Upcoming extends Component {
   getUpcomingMovies = async () => {
     const {pageNo} = this.state
     this.setState({isLoading: true})
-    const API_KEY = '2f83ec84901bd7649571067e75f12a91'
+    const API_KEY = '4841f35a65dc0931b163ff28846b3196'
     const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=en-US&page=${pageNo}`
     const response = await fetch(url)
     const data = await response.json()

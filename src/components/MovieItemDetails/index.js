@@ -2,8 +2,6 @@ import './index.css'
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 
-import {MovieDetailsBg} from './styledComponents'
-
 class MovieItemDetails extends Component {
   state = {isLoading: true, movieItemDetails: {}, castDetails: []}
 
@@ -14,7 +12,7 @@ class MovieItemDetails extends Component {
 
   getMovieDetails = async () => {
     this.setState({isLoading: true})
-    const API_KEY = '2f83ec84901bd7649571067e75f12a91'
+    const API_KEY = '4841f35a65dc0931b163ff28846b3196'
     const {match} = this.props
     const {params} = match
     const {id} = params
@@ -44,7 +42,7 @@ class MovieItemDetails extends Component {
 
   getCastDetails = async () => {
     this.setState({isLoading: true})
-    const API_KEY = '2f83ec84901bd7649571067e75f12a91'
+    const API_KEY = '4841f35a65dc0931b163ff28846b3196'
     const {match} = this.props
     const {params} = match
     const {id} = params
@@ -83,10 +81,14 @@ class MovieItemDetails extends Component {
       overview,
       runtime,
     } = movieItemDetails
+
     return (
       <>
         <div className="movie-details-section">
-          <MovieDetailsBg backdropPath={backdropPath} />
+          <div
+            className="movie-detaile-bg"
+            style={{backgroundImage: `url(${backdropPath})`}}
+          />
 
           <img className="movie-details-img" src={posterPath} alt={title} />
           <div className="movie-details-info-div">

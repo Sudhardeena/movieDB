@@ -19,7 +19,7 @@ export default function Pagination(props) {
   return (
     <div className="pagination-container">
       <button type="button" className="page-btn" onClick={setPrevPage}>
-        {'<'}
+        Prev
       </button>
       {paginationArr.map(el => (
         <button
@@ -32,7 +32,7 @@ export default function Pagination(props) {
         </button>
       ))}
       <button type="button" className="page-btn" onClick={setNextPage}>
-        {'>'}
+        Next
       </button>
     </div>
   )
