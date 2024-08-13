@@ -14,10 +14,7 @@ const Navbar = props => (
         onchangesearchedMovie(event.target.value)
 
       const redirectToSearchMoviesPage = async () => {
-        // const getSearchedMovies = async () => {
         const API_KEY = '2f83ec84901bd7649571067e75f12a91'
-
-        // console.log()
         const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${searchedMovie}&page=1`
         const response = await fetch(url)
         const data = await response.json()
